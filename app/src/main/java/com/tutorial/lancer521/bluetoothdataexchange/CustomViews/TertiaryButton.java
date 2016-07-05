@@ -39,7 +39,9 @@ public class TertiaryButton extends Button {
         paddingRight = padding;
       }
     } finally {
-      setPadding(paddingLeft, paddingTop, paddingRight, paddingBottom);
+      setPadding(0, 0, 0, 0);
+      setMinHeight(0);
+      setMinWidth(0);
       // Note that TypedArray objects are a shared resource and must be recycled after use.
       attributes.recycle();
     }
