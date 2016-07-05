@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
 /**
  * @author Lancer521
@@ -76,9 +77,9 @@ public class MainActivityFragment extends Fragment implements View.OnClickListen
   }
 
   private void handlePairedDevicesButton() {
-    setPairedDevicesToAdapter();
-    mPairedListView.setVisibility(View.VISIBLE);
-    mPairedListView.setAdapter(mArrayAdapter);
+//    setPairedDevicesToAdapter();
+//    mPairedListView.setVisibility(View.VISIBLE);
+//    mPairedListView.setAdapter(mArrayAdapter);
     //TODO: Set an adapter to the ListView
   }
 

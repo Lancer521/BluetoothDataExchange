@@ -3,6 +3,7 @@ package com.tutorial.lancer521.bluetoothdataexchange.CustomViews;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
+import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.widget.TextView;
 import com.tutorial.lancer521.bluetoothdataexchange.R;
@@ -18,6 +19,7 @@ import com.tutorial.lancer521.bluetoothdataexchange.R;
 public class MessageTextView extends TextView {
 
   private boolean mFontLarge;
+  private Paint mFontPaint;
 
   public MessageTextView(Context context, AttributeSet attrs) {
     super(context, attrs);
@@ -44,6 +46,8 @@ public class MessageTextView extends TextView {
   }
 
   private void init(){
+    mFontPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    mFontPaint.setTextSize(mFontLarge ? 24 : 12);
     // Creating objects ahead of time is an important optimization. Views are redrawn very frequently,
     // and many drawing objects require expensive initialization. Creating drawing objects within your
     // onDraw() method significantly reduces performance and can make your UI appear sluggish.
